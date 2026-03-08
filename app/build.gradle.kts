@@ -48,6 +48,5 @@ dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
-    // JSON parsing
-    implementation("org.json:json:20231013")
+    // org.json is provided by the Android platform — no extra dependency needed
 }
