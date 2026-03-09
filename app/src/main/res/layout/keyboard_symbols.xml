@@ -72,7 +72,7 @@
         <TextView style="@style/KeyStyle" android:text=":" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="2dp" />
         <TextView style="@style/KeyStyle" android:text=";" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="2dp" />
         <TextView style="@style/KeyStyle" android:text="/" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="2dp" />
-        <TextView style="@style/KeyStyle" android:text="?" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="2dp" />
+        <TextView style="@style/KeyStyle" android:text="@string/key_question_mark" android:layout_width="0dp" android:layout_weight="1" android:layout_margin="2dp" />
 
         <ImageView
             android:id="@+id/sym_backspace"

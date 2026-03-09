@@ -14,4 +14,6 @@
     <string name="transcribing">Transcribing…</string>
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>
+    <string name="key_symbols_label">?123</string>
+    <string name="key_question_mark">?</string>
 </resources>

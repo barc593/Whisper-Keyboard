@@ -113,7 +113,7 @@
             android:layout_weight="1.2"
             android:layout_margin="2dp"
             android:background="@drawable/key_special_background"
-            android:text="?123"
+            android:text="@string/key_symbols_label"
             android:textSize="14sp" />
 
         <TextView
