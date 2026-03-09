@@ -30,7 +30,19 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace 2>&1 | tee /tmp/build.log; exit ${PIPESTATUS[0]}
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug --stacktrace --info 2>&1 | tee /tmp/build.log || {
+            echo ""
+            echo "::group::Build failure - last 200 lines"
+            tail -200 /tmp/build.log
+            echo "::endgroup::"
+            # Emit key error lines as annotations
+            grep -E "^e: |error:|FAILED|Caused by:|What went wrong:" /tmp/build.log | head -10 | while IFS= read -r line; do
+              echo "::error::$line"
+            done
+            exit 1
+          }
 
       - name: Upload build log on failure
         if: failure()
